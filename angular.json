@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "b-home-ng": {
+    "b-home-project": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/b-home-ng",
+            "outputPath": "dist/b-home-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "b-home-ng:build"
+            "browserTarget": "b-home-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "b-home-ng:build:production"
+              "browserTarget": "b-home-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "b-home-ng:build"
+            "browserTarget": "b-home-project:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "b-home-ng-e2e": {
+    "b-home-project-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "b-home-ng:serve"
+            "devServerTarget": "b-home-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "b-home-ng:serve:production"
+              "devServerTarget": "b-home-project:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "b-home-ng"
+  "defaultProject": "b-home-project"
 }
