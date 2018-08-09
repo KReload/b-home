@@ -1,7 +1,13 @@
-var http = require('http');
+var express = require("express");
+var bodyParser = require("body-parser");
+var mongodb = require("mongodb");
+var ObjectID = mongodb.ObjectID;
 
-//create a server object:
-http.createServer(function (req, res) {
-  res.write('Hello World!'); //write a response to the client
-  res.end(); //end the response
-}).listen(process.env.PORT || 3000);
+var CONTACTS_COLLECTION = "contacts";
+
+var app = express();
+app.use(bodyParser.json());
+
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
