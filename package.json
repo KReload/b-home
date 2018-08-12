@@ -24,6 +24,8 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "body-parser": "^1.18.3",
+    "colyseus": "^0.9.13",
+    "colyseus.js": "^0.9.13",
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "rxjs": "^6.0.0",
