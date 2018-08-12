@@ -9,6 +9,7 @@ export class AppComponent {
   constructor(){
     this.room = this.client.join("chat");
   }
+  
   room;
   client = new Colyseus.Client("ws://localhost:2657");
   
